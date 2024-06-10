@@ -1,0 +1,9 @@
+import create_csv
+
+
+def start_bubble_api():
+    create_csv.run()
+
+
+if __name__ == "__main__":
+    start_bubble_api()
