@@ -1,0 +1,18 @@
+import requests
+import auth
+
+
+def run():
+    token = auth.run()
+    url = " https://os.clearjet.com/version-01v/api/1.1/wf/python_json_to_csv"
+
+    headers = {
+        "Authorization": "Bearer" + " " + token
+    }
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        print("Error:", response.status_code)
