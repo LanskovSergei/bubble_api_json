@@ -1,0 +1,9 @@
+import pandas as pd
+import get_JSON_from_bubble
+
+def run():
+    response_data = get_JSON_from_bubble.run()["response"]
+    df = pd.DataFrame([response_data])
+    csv_filename = "output_11.06-2.csv"
+    df.to_csv(csv_filename, index=False)
+    print(f"Data has been saved to {csv_filename}")
