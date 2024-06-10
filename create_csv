@@ -9,3 +9,4 @@ def run():
     csv_filename = f"output_{current_datetime}.csv"
     df.to_csv(csv_filename, index=False)
     print(f"Data has been saved to {csv_filename}")
+    return csv_filename
