@@ -5,7 +5,7 @@ from main import start_bubble_api
 class TestRunFunction(unittest.TestCase):
     def test_run(self):
         # File created?
-        saved_file = start_bubble_api("fillogicshipping@clearjet.com", ":6uB:Z4e")
+        saved_file = start_bubble_api("EMAIL", "PASSWORD")
         self.assertTrue(os.path.exists(saved_file))
         # File not empty?
         with open(saved_file, 'r') as file:
