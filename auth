@@ -1,11 +1,11 @@
 import requests
 
 
-def run():
+def run(email, password):
     url = "https://os.clearjet.com/version-01v/api/1.1/wf/auth"
     payload = {
-        "email": "cwcshipping@clearjet.com",
-        "password": "" #PASSWORD 
+        "email": email,
+        "password": password
     }
 
     response = requests.post(url, json=payload)
