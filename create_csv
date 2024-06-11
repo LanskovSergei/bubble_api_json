@@ -2,8 +2,9 @@ import pandas as pd
 import get_JSON_from_bubble
 from datetime import datetime
 
-def run():
-    response_data = get_JSON_from_bubble.run()["response"]
+
+def run(email, password):
+    response_data = get_JSON_from_bubble.run(email, password)["response"]
     df = pd.DataFrame([response_data])
     current_datetime = datetime.now().strftime("%Y%m%d_%H%M%S")
     csv_filename = f"output_{current_datetime}.csv"
