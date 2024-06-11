@@ -2,8 +2,8 @@ import requests
 import auth
 
 
-def run():
-    token = auth.run()
+def run(email, password):
+    token = auth.run(email, password)
     url = " https://os.clearjet.com/version-01v/api/1.1/wf/python_json_to_csv"
 
     headers = {
